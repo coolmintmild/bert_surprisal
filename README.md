@@ -1,5 +1,7 @@
 # bert_surprisal
 
+HuggingFace.co의 pretrained-models를 활용하여 단어의 surprisal 구하기
+
 ## Example
 <pre>
 python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncased --resultdir ../results
