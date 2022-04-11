@@ -25,14 +25,14 @@ python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncase
 
 
 ## test set
-> a. As the woman edited the magazine about fishing amused all the reporters.\
-> b. As the woman sailed the magazine about fishing amused all the reporters.\
-> c. As the woman edited, the magazine about fishing amused all the reporters.\
+> a. As the woman edited the magazine about fishing amused all the reporters.
+> b. As the woman sailed the magazine about fishing amused all the reporters.
+> c. As the woman edited, the magazine about fishing amused all the reporters.
 > d. As the woman edited, the magazine about fishing amused all the reporters.
 
-* a & b: garden-path sentences\
-* a: plausible conditions "edited the magazine"\
-* b: implausible conditions "?sailed the magazine"\\
+* a & b: garden-path sentences
+* a: plausible conditions "edited the magazine"
+* b: implausible conditions "?sailed the magazine"
 
 a조건의 critical(disambiguation) region ("amsued")가 b 조건에 비해 RT/surprisal이 높을 것으로 예상됨.
 
