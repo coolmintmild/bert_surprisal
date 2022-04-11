@@ -7,7 +7,7 @@
 
 ## source
 * get_surprisal.py: surprisal (결과값) 구하기
-* access_model.py: model 부르기 & surprisal, probablity, prediction 구하기 위한 함수들
+* util.py: model 부르기 & surprisal 구하기 위한 함수들
 * get_tsv_formatted.py: test set을 get_surprisal.py에서 이용할 수 있는 형식으로 변환하는 파일
 
 ## dataset
