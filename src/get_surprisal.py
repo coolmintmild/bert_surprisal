@@ -87,7 +87,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print('LOADING MODELS')
-    model, tokenizer = util.load_model(args.model)         # 모델의 폴더를 쓰거나(?) 'bert-base-cased'를 쓰거나(?)
+    model, tokenizer = util.load_model(args.model)
+    # lstm 모델 등 자신의 training 시킨 모델을 사용하고 싶다면 torch.load()등 활용하
 
     # LM configuration 출력하기
     config_log = open(f'{args.resultdir}/{args.model}_config.txt', 'w')
