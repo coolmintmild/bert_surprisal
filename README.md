@@ -2,7 +2,7 @@
 
 ## Example
 <pre>
-!python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncased --resultdir ../results
+python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncased --resultdir ../results
 </pre>
 
 ## source
