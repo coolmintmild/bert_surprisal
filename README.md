@@ -1,6 +1,6 @@
 # bert_surprisal
 
-HuggingFace.co의 pretrained-models를 활용하여 단어의 surprisal 구하기\
+HuggingFace.co의 pretrained-models를 활용하여 단어의 surprisal 구하기
 * original sentence: We introduce a new language representation model called BERT.
 * masked sentence ([MASK] token on a target word): We introduce a new [MASK] representation model called BERT.
 * [MASK] token에 나타날 단어를 예측 -> 이를 language로 예측할 확률은 얼마인가?
