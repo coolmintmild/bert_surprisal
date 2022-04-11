@@ -27,7 +27,7 @@ python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncase
 * target region의 surprsisal 값의 평균을 조건마다 비교하여 model의 performance를 측정
 
 
-## test set
+## sample test set
 > a. As the woman edited the magazine about fishing amused all the reporters.\
 > b. As the woman sailed the magazine about fishing amused all the reporters.\
 > c. As the woman edited, the magazine about fishing amused all the reporters.\
