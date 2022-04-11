@@ -25,9 +25,9 @@ python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncase
 
 
 ## test set
-> a. As the woman edited the magazine about fishing amused all the reporters.
-> b. As the woman sailed the magazine about fishing amused all the reporters.
-> c. As the woman edited, the magazine about fishing amused all the reporters.
+> a. As the woman edited the magazine about fishing amused all the reporters.\
+> b. As the woman sailed the magazine about fishing amused all the reporters.\
+> c. As the woman edited, the magazine about fishing amused all the reporters.\
 > d. As the woman edited, the magazine about fishing amused all the reporters.
 
 * a & b: garden-path sentences
