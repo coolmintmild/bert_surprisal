@@ -1,7 +1,7 @@
 import os
 import argparse
 import pandas as pd
-import access_model as tp
+import util
 import matplotlib
 matplotlib.use('agg')
 # import sys
@@ -38,7 +38,7 @@ def get_surprisals(sentence, model, tokenizer):
         # else :
         # 각 단어를 [MASK]로 변환한 masked sentence를 만듦. The surgeon pricked himself -> The [MASK] pricked himself.
         masked_sentence = '[CLS] ' + sentence.replace(word, '[MASK]')            # 문장 시작을 알리기 위한 [CLS]를 추가함
-        surprisal, model_word = tp.get_surprisal(word, masked_sentence, model, tokenizer)
+        surprisal, model_word = util.get_surprisal(word, masked_sentence, model, tokenizer)
         surprisals.append(float(surprisal))
         model_words.append(model_word)
 
@@ -59,7 +59,7 @@ def run_models(args):
             conditions_df = pd.read_csv(
                 os.path.join(path, "items-BERT.tsv"),       # items-BERT.tsv 가 test set 파일 이름-> 본인의 파일이름이 다르다면 수정
                 sep="\t", index_col=0
-            )
+            ).reset_index(drop=True)
             # 단어 단위로 되어있는 데이터를 문장단위로 변경 (items-BERT.tsv을 보면 단어별로 나눠져 있음. 이것을 다시 문장으로 바꾸는 작업)
             sentence_list = [sentence for sentence in sentences(conditions_df['word'])]
 
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print('LOADING MODELS')
-    model, tokenizer = tp.load_model(args.model)         # 모델의 폴더를 쓰거나(?) 'bert-base-cased'를 쓰거나(?)
+    model, tokenizer = util.load_model(args.model)         # 모델의 폴더를 쓰거나(?) 'bert-base-cased'를 쓰거나(?)
 
     # LM configuration 출력하기
     config_log = open(f'{args.resultdir}/{args.model}_config.txt', 'w')
