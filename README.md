@@ -17,6 +17,11 @@ python get_surprisal.py --stimdir ../datasets/surprisal --model bert-base-uncase
   * 이 파일의 형식에 맞게 본인이 원하는 test set을 구성한 후 자신의 syntactic test 수행 가능
   * 혹은 처음부터 items-BERT.tsv의 형식에 맞게 test set을 구성하여 사용할 수도 있음.
 
+## result
+* surprisal column이 각 단어의 surprisal 값 (기댓값/확률)
+* target region의 surprsisal 값의 평균을 조건마다 비교하여 model의 performance를 측정
+
+
 ## test set
 > a. As the woman edited the magazine about fishing amused all the reporters.\
 > b. As the woman sailed the magazine about fishing amused all the reporters.\
